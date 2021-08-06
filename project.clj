@@ -7,4 +7,9 @@
   :main ^:skip-aot clojure-noob.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all
-                       :jvm-opts ["-Dclojure.compiler.direct-linking=true"]}})
+                       :jvm-opts ["-Dclojure.compiler.direct-linking=true"]}}
+  :repl-options {
+       :prompt (fn [ns] (str "\u001B[35m[\u001B[34m" ns "\u001B[35m]\u001B[33mcλ:\u001B[m " ))
+
+       :welcome (println "Time for  REPL Driven Development!")}
+  )
